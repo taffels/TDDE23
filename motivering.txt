@@ -1,0 +1,60 @@
+Motivering test
+
+1. I pixel_constraint vill jag kolla om:
+
+- funktionen returnerar rätt värde för om input både matchar conditonet och om det är utanför
+    för att se att funktionen returnerar det den ska
+
+- två inputs som är på gränsen över (255) och en under (99)
+    för att se om den hanterar gränsvärden och returnerar rätt
+
+- en input som inte är en tupel.
+    för att se om en färgtupel är innanför rangen måste jag ha en tupel, kan inte ha en list eller int
+
+- ett värde i tupeln är mindre än 0, för att en färgpixel ska vara mellan 0 och 255.
+    Tidigare hade funktionen returnerat 0 eftersom pixeln inte matchar conditionet, men som sagt
+    ska inte en färg ligga utanför 0 och 255
+
+- ett värde i tupeln är större än 255, med samma motivering som ovan.
+
+- tupelns längd är 3
+    vi behöver en tupel av längd tre då h s v / b g r måste vara 3 lång för att det ska vara
+    färger
+
+
+2. I generator vill jag kolla om:
+
+- en input som är en lista med tuplar
+    som ska returner rätt pixel för samma indexet i listan
+
+- inputen är en lista
+    vi kan inte kolla en färg av en pixel i en lista om vi inte har en lista
+
+- inputen är en tom lista
+    vi kan inte kolla en färg av en pixel i en lista för en tom lista
+
+- om pixeln är en tupel
+    en pixel (b, g, r) eller (h, s, v), en int eller lista är inte en färgtupel
+
+- om pixel är en tupel av längden 3
+    för att få värdena måste den vara 3 enheter lång, annars ingen färgtupel av pixeln
+    därför testa en lista med för korta tuplar
+
+
+3. I comb_images vill jag testa om:
+
+- den kombinerade listan är samma som i mitt fall, generator4
+    eftersom generator4 uppnår conditionet ska detta vara samma som den kombinerade listan
+
+- en input som är två listor av tuplar med olika värden som båda matchar conditionet
+    vill se om returnerar en lista med de kombinerade listorna
+
+- generatorernas lista inte är lika långa
+    för att kombinera två bilder måste längden vara densamma
+
+- minst en av generatorernas tuplelista har fel längd på tupeln
+    tuplarna måste vara av längd 3 för att kunna kombinera färgerna
+
+- om minst en generatorernas lista består av listor.
+    måste vara tuplar för att kunna kombinera tublar, dessutom är det färgerna vi vill kombinera
+    som är på formen (b, g, r) eller (h, s, v).
